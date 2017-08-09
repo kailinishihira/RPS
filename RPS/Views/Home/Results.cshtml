@@ -2,4 +2,9 @@
     Layout = "_Layout";
 }
 
-<p>@Model.GameWinner()</p>
+@foreach (var winner in Model)
+{
+    <h2>@winner</h2>
+}
+
+<a href="/"><button>Home</button></a>

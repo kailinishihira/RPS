@@ -18,16 +18,24 @@ namespace RPS.Controllers
         {
             string player1 = (Request.Form["player1"]);
             Game.SetPlayer1Choice(player1);
-            return View("player2", player1);
+            return View();
         }
 
         [HttpPost("/rps/results")]
         public ActionResult Results()
-        { 
+        {   
+            Game.ClearAll();
             string player2 = (Request.Form["player2"]);
-            string player1 = GetPlayer1Choice();
+            string player1 = Game.GetPlayer1Choice();
             Game myGame = new Game (player1, player2);
-            myGame.GameWinner();
+            
+            List<string> winner = myGame.GameWinner();
+            return View(winner);
+        }
+
+        [HttpPost("/")]
+        public ActionResult Clear()
+        {
             return View();
         }
     }

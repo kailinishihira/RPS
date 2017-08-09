@@ -16,7 +16,7 @@ namespace RPS.Models
       _player2 = inputPlayer2;
     }
 
-    public string GetPlayer1Choice()
+    public static string GetPlayer1Choice()
     {
       return _player1Choice;
     }
@@ -34,7 +34,7 @@ namespace RPS.Models
     // {
     //   return _player2;
     // }
-    // public void SetPlayer2(string newPlayer2)
+    // public void SetPlayer2(string newPlayer2) 
     // {
     //   _player2 = newPlayer2;
     // }
@@ -62,7 +62,7 @@ namespace RPS.Models
       {
         _winnerList.Add("Player 2 Wins");
       }
-      return _winnerList ;
+      return _winnerList;
     }
 
     public static void ClearAll()
