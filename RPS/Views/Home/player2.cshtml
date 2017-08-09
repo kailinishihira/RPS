@@ -1,0 +1,27 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class="jumbotron">
+    <h1>Player 2!  It's your turn!</h1>
+</div>
+
+<p>@Model</p>
+
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 home-buttons">
+    <form action="/rps/results" method="post">
+      <button type="submit" class="btn btn-info btn-lg home-btn" name="player2" value="rock">Rock</button>
+    </form>
+    <form action="/rps/results" method="post">
+      <button type="submit" class="btn btn-info btn-lg home-btn" name="player2" value="paper">Paper</button>
+    </form>
+    <form action="/rps/results" method="post">
+      <button type="submit" class="btn btn-info btn-lg home-btn" name="player2" value="scissors">Scissors</button>
+    </form>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>
